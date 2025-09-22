@@ -6,6 +6,8 @@ function App() {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
 
+ const api_key = "85b1a42d5ed24786b78191037252508"; 
+
   const fetchWeather = async () => {
     const trimmedCity = city.trim();
     if (!trimmedCity) {
@@ -18,7 +20,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${encodeURIComponent(
+        `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${encodeURIComponent(
           trimmedCity
         )}`
       );
