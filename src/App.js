@@ -40,7 +40,7 @@ function App() {
     } catch (err) {
       alert("Failed to fetch weather data");
     } finally {
-      setLoading(false);
+          setTimeout(() => setLoading(false), 100); 
     }
   };
 
